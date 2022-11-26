@@ -1,0 +1,33 @@
+.cabecera{
+    background-color: aqua;
+    width: 35%;
+    text-align: center;
+    margin: auto;
+}
+
+.titulo1{
+    color: red;
+    
+}
+.barra_navegacion{
+    background-color: #46928B;
+    margin-top: 2px;
+    
+    text-align: center;
+}
+span li {
+    display: inline;
+    padding: 10px;
+}
+span li a {
+    color: white;
+}
+body{
+    background-color: #325955;
+}
+p {
+    background-color: red;
+}
+.form1{
+    background-color: red;
+}

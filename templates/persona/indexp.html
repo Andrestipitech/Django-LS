@@ -1,0 +1,22 @@
+{% extends 'main/main.html'%}
+
+{%block title%}
+    Persona
+{% endblock %}
+
+{%block header %}
+    <h1 class="titulo1">
+        modifique el titulo en la app persona
+    </h1>
+{% endblock %}
+{%block nav %}
+    {% include 'persona/barra_nav.html' %}
+{% endblock %}
+
+{%block content %}
+    <form method="post" class="form1">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Guardar</button>
+    </form>
+{% endblock %}
