@@ -6,6 +6,9 @@ class Mantenimiento(models.Model):
     descipcion = models.CharField(max_length=85)
     fecha = models.DateField()
 
+    def __str__(self):
+        return f'{self.descipcion}'
+
 
 class Vehiculo(models.Model):
     placa = models.CharField(max_length=8, primary_key=True)

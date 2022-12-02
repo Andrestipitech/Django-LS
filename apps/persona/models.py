@@ -12,3 +12,5 @@ class Persona(models.Model):
     cod_postal = models.CharField(max_length=15)
     celular = models.CharField(max_length=15)
     
+    def __str__(self):
+        return f'{self.nombre}'

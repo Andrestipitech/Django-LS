@@ -2,6 +2,7 @@ from django import forms
 from apps.persona.models import Persona
 
 class PersonaFrom(forms.ModelForm):
+    #required_css_class = "hola"
     class Meta:
         model = Persona
         fields = [
@@ -17,7 +18,7 @@ class PersonaFrom(forms.ModelForm):
             'celular',
         ]
         labels = {
-            'dni': 'Cedula',
+            'dni': 'Cedula' ,
             'nombre': 'Nombre',
             'edad': 'Edad',
             'sexo': 'Sexo',

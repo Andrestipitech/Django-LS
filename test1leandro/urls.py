@@ -21,6 +21,7 @@ urlpatterns = [
     path('saludo/', saludo),
     path('prueba2/<str:nombre>/<int:edad>',mayor_edad),
     path('admin/', admin.site.urls),
-    path('persona/', include('apps.persona.urls'), name='persona'),
+    path('persona/', include(('apps.persona.urls'))),
+    path('vehiculo/', include(('apps.vehiculo.urls'))),
     
 ]
