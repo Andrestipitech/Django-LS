@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.persona',
     'apps.vehiculo',
+    'import_export',
+    'apps.pbv',
 ]
 #CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
