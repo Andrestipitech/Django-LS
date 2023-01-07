@@ -46,3 +46,22 @@ td{
 th{
     background-color: red;
 }
+.btn_edit{
+    height: 50px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+.btns{
+    height: 60px;
+}
+.btn_del{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
