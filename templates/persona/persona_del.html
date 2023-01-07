@@ -1,12 +1,12 @@
 {% extends 'main/main.html'%}
 
 {%block title%}
-    Vehiculo
+    Persona
 {% endblock %}
 
 {%block header %}
     <h1 class="titulo1">
-        Crear vehiculo
+        Crear persona
     </h1>
 {% endblock %}
 {%block nav %}
@@ -16,8 +16,9 @@
 {%block content %}
     <form method="post" class="form1">
         {% csrf_token %}
-        {{form.as_p}}
-        {{form2.as_p}}
-        <button>Guardar</button>
+        <h3>Desea eliminar {{object.dni}} {{object.nombre}}</h3>
+        
+        <button type="submit">Eliminar</button>
+        <a href="{%url 'persona:persona_listar'%}">Cancelar</a>
     </form>
 {% endblock %}

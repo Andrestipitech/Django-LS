@@ -26,11 +26,12 @@
                 <th>Direccion</th>
                 <th>Codigo postal</th>
                 <th>celular</th>
+                <th >Acciones</th>
             </tr>
         </thead>
         <tbody>
-            {% if personas %}
-                {% for persona in personas %}
+            {% if object_list %}
+                {% for persona in object_list %}
                     <tr>
                         <td>{{persona.dni}}</td>
                         <td>{{persona.nombre}}</td>
@@ -42,6 +43,10 @@
                         <td>{{persona.direccion}}</td>
                         <td>{{persona.cod_postal}}</td>
                         <td>{{persona.celular}}</td>
+                        <td class="btns">
+                            <a href="{% url 'persona:persona_editar' persona.dni %}" class="btn_edit">editar</a>
+                            <a href="{% url 'persona:persona_eliminar' persona.dni %}" class="btn_del">eliminar</a>
+                        </td>
                         
                     </tr>
                 {% endfor %}

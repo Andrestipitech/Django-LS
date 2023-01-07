@@ -1,0 +1,38 @@
+{% extends 'boostrap/index.html'%}
+{% block tittle%}
+    eliminar auto
+{%endblock%}
+
+{%block content%}
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="text-light">Formulario</h2>
+            <form method="post">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="{{form.marca.name}}" class="form-label text-light">{{form.marca.label}}</label>
+                {{form.marca}}
+              </div>
+              <div class="mb-3">
+                <label for="{{form.modelo.name}}" class="form-label text-light">{{form.modelo.label}}</label>
+                {{form.modelo}}
+              </div>
+              <div class="mb-3">
+                <label for="{{form.cc.name}}" class="form-label text-light">{{form.cc.label}}</label>
+                {{form.cc}}
+              </div>
+              <div class="mb-3">
+                <label for="{{form.especificaciones.name}}" class="form-label text-light">{{form.especificaciones.label}}</label>
+                {{form.especificaciones}}
+              </div>
+              <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-success">Guardar  <i class="fa-solid fa-right-to-bracket"></i></button>
+                <button class="btn btn-secondary">Cancelar</button>
+              </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends 'boostrap/index.html'%}
+{% block tittle%}
+    eliminar auto
+{%endblock%}
+
+{%block content%}
+    <form method="post">
+        {% csrf_token %}
+        <h3 class="text-light">¿Deseas eliminar el registro de {{pbv.marca}} {{pbv.modelo}}?</h3>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{%url 'pbv:lista'%}" class="btn btn-success">Cancelar</a>
+    </form>
+{%endblock%}
