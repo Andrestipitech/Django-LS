@@ -9,12 +9,12 @@ class MantenimientoForm(forms.ModelForm):
             'fecha', 
         ]
         labels = {
-            'descipcion': 'Placa',
-            'fecha': 'Marca',
+            'descipcion': 'Descripcion',
+            'fecha': 'Fecha (mm/dd/Y)',
         }
         widgets = {
             'descipcion': forms.TextInput(attrs={'class': 'form-control'}),
-            'fecha' :forms.DateField(),     
+            'fecha' :forms.DateInput(format='%d/%m/%Y'),     
         }
 
 class VehiculoForm(forms.ModelForm):
@@ -27,7 +27,7 @@ class VehiculoForm(forms.ModelForm):
             'tipo',
             'color',
             'cc',
-            'persona',
+            
             'mantenimiento',
             
         ]
@@ -38,7 +38,7 @@ class VehiculoForm(forms.ModelForm):
             'tipo': 'Tipo',
             'color': 'Color',
             'cc': 'Cilindraje',
-            'persona': 'Propietario',
+            
             'mantenimiento': 'Mantenimiento',
         }
         widgets = {
@@ -48,7 +48,7 @@ class VehiculoForm(forms.ModelForm):
             'tipo': forms.TextInput(attrs={'class': 'form-control'}),
             'color': forms.TextInput(attrs={'class': 'form-control'}),
             'cc' :forms.TextInput(attrs={'class': 'form-control'}) ,
-            'persona':forms.Select(attrs={'class': 'form-control'}),
+            
             'mantenimiento': forms.CheckboxSelectMultiple(),
             
         }

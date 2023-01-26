@@ -1,10 +1,11 @@
 from django.db import models
 
 class Persona(models.Model):
+    genero = (('Femenino', 'Femenino'), ('Masculino', 'Masculino'))
     dni = models.CharField(max_length=10,primary_key=True)
     nombre = models.CharField(max_length=8)
     edad = models.IntegerField(blank=True)
-    sexo = models.CharField(max_length=10)
+    sexo = models.CharField(max_length=10, choices=genero, default = 'Femenino')
     correo = models.CharField(max_length=25)
     pais = models.CharField(max_length=15)
     provincia = models.CharField(max_length=15)

@@ -33,7 +33,7 @@ class PersonaFrom(forms.ModelForm):
             'dni': forms.TextInput(attrs={'class': 'form-control'}),
             'nombre' :forms.TextInput(attrs={'class': 'form-control'}),
             'edad' :forms.TextInput(attrs={'class': 'form-control'}),
-            'sexo': forms.TextInput(attrs={'class': 'form-control'}),
+            'sexo': forms.Select(attrs={'class': 'form-control'}),
             'correo': forms.TextInput(attrs={'class': 'form-control'}),
             'pais' :forms.TextInput(attrs={'class': 'form-control'}) ,
             'provincia':forms.TextInput(attrs={'class': 'form-control'}),
